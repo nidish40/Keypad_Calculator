@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "Nidish TS",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -191.4, "left": -205.2, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -98, "left": 274.4, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -310.98,
+      "left": 317.92,
+      "attrs": { "digits": "4", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 109.55,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 128.75,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 147.95,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 167.15,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "mega:A0", "keypad1:R1", "green", [ "v285.3", "h342.3" ] ],
+    [ "mega:A1", "keypad1:R2", "green", [ "v304.5", "h332.8" ] ],
+    [ "keypad1:R3", "mega:A2", "green", [ "v96", "h-326.7" ] ],
+    [ "mega:A3", "keypad1:R4", "green", [ "v333.3", "h332.75" ] ],
+    [ "mega:GND.2", "r1:1", "black", [ "v26.1", "h-93.85" ] ],
+    [ "r4:1", "r3:1", "green", [ "v0" ] ],
+    [ "r3:1", "r2:1", "green", [ "v0" ] ],
+    [ "r2:1", "r1:1", "green", [ "v0" ] ],
+    [ "keypad1:C1", "mega:A8", "green", [ "v124.8", "h-268.9" ] ],
+    [ "mega:A9", "keypad1:C2", "green", [ "v362.1", "h298.8" ] ],
+    [ "mega:A10", "keypad1:C3", "green", [ "v371.7", "h298.9" ] ],
+    [ "mega:A11", "keypad1:C4", "green", [ "v381.3", "h289.15" ] ],
+    [ "mega:A8", "r1:2", "green", [ "v0" ] ],
+    [ "mega:A9", "r2:2", "green", [ "v0" ] ],
+    [ "mega:A10", "r3:2", "green", [ "v0" ] ],
+    [ "mega:A11", "r4:2", "green", [ "v0" ] ],
+    [ "mega:22", "sevseg1:A", "green", [ "v-181.3", "h209" ] ],
+    [ "mega:23", "sevseg1:B", "green", [ "v-210.1", "h208.6" ] ],
+    [ "mega:24", "sevseg1:C", "green", [ "v0.95", "h228.2" ] ],
+    [ "mega:25", "sevseg1:D", "green", [ "v-8.65", "h208.6" ] ],
+    [ "mega:26", "sevseg1:E", "green", [ "v1.05", "h257" ] ],
+    [ "mega:27", "sevseg1:F", "green", [ "v-171.75", "h208.6" ] ],
+    [ "sevseg1:G", "mega:28", "green", [ "v0" ] ],
+    [ "sevseg1:DP", "mega:29", "green", [ "v0" ] ],
+    [ "sevseg1:DIG1", "mega:37", "green", [ "v-9.6", "h-134.39", "v211.2" ] ],
+    [ "sevseg1:DIG2", "mega:36", "green", [ "v-67.2", "h-153.6", "v259.2" ] ],
+    [ "sevseg1:DIG3", "mega:35", "green", [ "v-76.8", "h-192", "v259.2" ] ],
+    [ "sevseg1:DIG4", "mega:34", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
