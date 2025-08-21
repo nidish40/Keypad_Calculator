@@ -63,8 +63,4 @@ Or run it yourself:
 This project is licensed under the **MIT License**.  
 Feel free to use and modify it for your own projects.  
 
----
 
-✅ With this README, recruiters/teachers/others can **understand your project at a glance** and immediately **try it online**.  
-
-Would you like me to also add a **step-by-step demo example** (like entering `12 + 34 = 46`) in the README? That makes it even clearer.
